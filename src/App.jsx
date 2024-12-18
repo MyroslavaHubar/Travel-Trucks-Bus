@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation/Navigation";
 import Loader from "./components/Loader/Loader";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
+import Catalog from "./pages/Catalog/Catalog";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Suspense fallback={<Loader />}>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/catalog" element={<Catalog />} />
           </Routes>
         </Suspense>
       </main>
