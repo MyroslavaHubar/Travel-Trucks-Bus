@@ -1,7 +1,12 @@
 import "./App.css";
+import Navigation from "./components/Navigation/Navigation";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Navigation />
+    </>
+  );
 }
 
 export default App;

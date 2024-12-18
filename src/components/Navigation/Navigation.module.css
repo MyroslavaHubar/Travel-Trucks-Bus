@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border-bottom: 1px solid #f2f4f7;
+  padding: 24px 64px;
+  background-color: #f7f7f7;
+}
+
+.headerNavigation {
+  display: flex;
+  gap: 32px;
+  position: absolute;
+  justify-content: flex-start;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.link {
+  color: #101828;
+}
+
+.active {
+  color: #d84343;
+}
