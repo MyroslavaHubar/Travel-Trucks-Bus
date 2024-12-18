@@ -1,0 +1,54 @@
+.homeSection {
+  background: rgba(0, 0, 0, 0.2);
+  background-image: url("../../assets/img/Hero-1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media only screen and (min-resolution: 192dpi) {
+  .homeSection {
+    background-image: url("../../assets/img/Hero-2x.jpg");
+  }
+}
+
+.homeContent {
+  margin: 216px 0;
+}
+
+.homeContext {
+  margin-bottom: 40px;
+}
+
+.homeTitle {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 0.67;
+  color: #f7f7f7;
+  margin-bottom: 16px;
+}
+
+.homeDescription {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: #f7f7f7;
+}
+
+.homeButton {
+  border-radius: 200px;
+  border: none;
+  width: 173px;
+  padding: 16px 60px;
+  background-color: #e44848;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #fff;
+  transition: background-color 150ms linear;
+}
+
+.homeButton:hover {
+  background-color: #d84343;
+}
