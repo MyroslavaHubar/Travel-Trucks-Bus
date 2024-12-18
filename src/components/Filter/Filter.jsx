@@ -57,35 +57,35 @@ const Filter = () => {
                 <svg width="32" height="32">
                   <use href="/src/assets/sprite.svg#wind" />
                 </svg>
-                AC
+                <span>AC</span>
               </label>
               <label>
                 <Field id="automatic" name="automatic" type="checkbox" />
                 <svg width="32" height="32">
                   <use href="/src/assets/sprite.svg#diagram" />
                 </svg>
-                Automatic
+                <span>Automatic</span>
               </label>
               <label>
                 <Field id="kitchen" name="kitchen" type="checkbox" />
                 <svg width="32" height="32">
                   <use href="/src/assets/sprite.svg#cup" />
                 </svg>
-                Kitchen
+                <span>Kitchen</span>
               </label>
               <label>
                 <Field id="tv" name="tv" type="checkbox" />
                 <svg width="32" height="32">
                   <use href="/src/assets/sprite.svg#tv" />
                 </svg>
-                TV
+                <span>TV</span>
               </label>
               <label>
                 <Field id="bathroom" name="tv" type="bathroom" />
                 <svg width="32" height="32">
                   <use href="/src/assets/sprite.svg#shower" />
                 </svg>
-                Bathroom
+                <span>Bathroom</span>
               </label>
             </div>
             {/* VEHICLE TYPE */}
@@ -96,21 +96,21 @@ const Filter = () => {
                 <svg width="32" height="32">
                   <use href="/src/assets/sprite.svg#grid" />
                 </svg>
-                Van
+                <span>Van</span>
               </label>
               <label>
                 <Field id="integrated" name="integrated" type="checkbox" />
                 <svg width="32" height="32">
                   <use href="/src/assets/sprite.svg#grid-2" />
                 </svg>
-                Fully Integrated
+                <span>Fully Integrated</span>
               </label>
               <label>
                 <Field id="alcove" name="alcove" type="checkbox" />
                 <svg width="32" height="32">
                   <use href="/src/assets/sprite.svg#grid-3" />
                 </svg>
-                Alcove
+                <span>Alcove</span>
               </label>
             </div>
             {/* BUTTON SEARCH */}
