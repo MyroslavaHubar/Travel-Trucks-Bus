@@ -41,7 +41,7 @@ const Filter = () => {
                 placeholder="City"
               />
               <svg width="20" height="20">
-                <use href="/public/sprite.svg#map" />
+                <use href="/sprite.svg#map" />
               </svg>
             </div>
             {errors.location && touched.location ? (
@@ -55,35 +55,35 @@ const Filter = () => {
               <label>
                 <Field id="ac" name="ac" type="checkbox" />
                 <svg width="32" height="32">
-                  <use href="/public/sprite.svg#wind" />
+                  <use href="/sprite.svg#wind" />
                 </svg>
                 <span>AC</span>
               </label>
               <label>
                 <Field id="automatic" name="automatic" type="checkbox" />
                 <svg width="32" height="32">
-                  <use href="/public/sprite.svg#diagram" />
+                  <use href="/sprite.svg#diagram" />
                 </svg>
                 <span>Automatic</span>
               </label>
               <label>
                 <Field id="kitchen" name="kitchen" type="checkbox" />
                 <svg width="32" height="32">
-                  <use href="/public/sprite.svg#cup" />
+                  <use href="/sprite.svg#cup" />
                 </svg>
                 <span>Kitchen</span>
               </label>
               <label>
                 <Field id="tv" name="tv" type="checkbox" />
                 <svg width="32" height="32">
-                  <use href="/public/sprite.svg#tv" />
+                  <use href="/sprite.svg#tv" />
                 </svg>
                 <span>TV</span>
               </label>
               <label>
                 <Field id="bathroom" name="tv" type="bathroom" />
                 <svg width="32" height="32">
-                  <use href="/public/sprite.svg#shower" />
+                  <use href="/sprite.svg#shower" />
                 </svg>
                 <span>Bathroom</span>
               </label>
@@ -94,21 +94,21 @@ const Filter = () => {
               <label>
                 <Field id="van" name="van" type="checkbox" />
                 <svg width="32" height="32">
-                  <use href="/public/sprite.svg#grid" />
+                  <use href="/sprite.svg#grid" />
                 </svg>
                 <span>Van</span>
               </label>
               <label>
                 <Field id="integrated" name="integrated" type="checkbox" />
                 <svg width="32" height="32">
-                  <use href="/public/sprite.svg#grid-2" />
+                  <use href="/sprite.svg#grid-2" />
                 </svg>
                 <span>Fully Integrated</span>
               </label>
               <label>
                 <Field id="alcove" name="alcove" type="checkbox" />
                 <svg width="32" height="32">
-                  <use href="/public/sprite.svg#grid-3" />
+                  <use href="/sprite.svg#grid-3" />
                 </svg>
                 <span>Alcove</span>
               </label>
