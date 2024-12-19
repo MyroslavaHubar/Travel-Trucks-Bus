@@ -2,9 +2,13 @@ import { Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import css from "./Filter.module.css";
 
 const LocationSchema = Yup.object().shape({
-  location: Yup.string().min(3, "Location must be at least 3 characters"),
+  location: Yup.string().matches(
+    /^[A-Za-z\s]+$/,
+    "Location can only contain Latin letters and spaces"
+  ),
 });
 
 const Filter = () => {
@@ -23,7 +27,7 @@ const Filter = () => {
   };
 
   return (
-    <>
+    <div className={css.filterForm}>
       <Formik
         initialValues={initialValues}
         validationSchema={LocationSchema}
@@ -32,89 +36,113 @@ const Filter = () => {
         {({ errors, touched }) => (
           <Form>
             {/* LOCATION */}
-            <div>
-              <label htmlFor="location">Location</label>
-              <Field
-                id="location"
-                name="location"
-                type="text"
-                placeholder="City"
-              />
-              <svg width="20" height="20">
-                <use href="/sprite.svg#map" />
-              </svg>
+            <div className={css.filterLocation}>
+              <label htmlFor="location" className={css.locationTitle}>
+                Location
+              </label>
+              <div className={css.locationInputWrapper}>
+                <svg width="20" height="20" className={css.filterIcon}>
+                  <use href="/sprite.svg#map" />
+                </svg>
+                <Field
+                  id="location"
+                  name="location"
+                  type="text"
+                  placeholder="City"
+                  className={css.locationInput}
+                />
+              </div>
+              {errors.location && touched.location ? (
+                <div className={css.errorsMessage}>{errors.location}</div>
+              ) : null}
             </div>
-            {errors.location && touched.location ? (
-              <div>{errors.location}</div>
-            ) : null}
+
             {/* FILTERS */}
-            <h2>Filters</h2>
+            <h2 className={css.filterTitle}>Filters</h2>
             {/* VEHICLE EQUIPMENT */}
-            <h3>Vehicle equipment</h3>
-            <div>
-              <label>
+            <h3 className={css.groupTitle}>Vehicle equipment</h3>
+            <div className={`${css.filterGroup} ${css.filterGroupEquipment}`}>
+              <label className={css.filterGroupLabel}>
                 <Field id="ac" name="ac" type="checkbox" />
-                <svg width="32" height="32">
-                  <use href="/sprite.svg#wind" />
-                </svg>
-                <span>AC</span>
+                <span>
+                  <svg width="32" height="32">
+                    <use href="/sprite.svg#wind" />
+                  </svg>
+                  AC
+                </span>
               </label>
-              <label>
+              <label className={css.filterGroupLabel}>
                 <Field id="automatic" name="automatic" type="checkbox" />
-                <svg width="32" height="32">
-                  <use href="/sprite.svg#diagram" />
-                </svg>
-                <span>Automatic</span>
+                <span>
+                  <svg width="32" height="32">
+                    <use href="/sprite.svg#diagram" />
+                  </svg>
+                  Automatic
+                </span>
               </label>
-              <label>
+              <label className={css.filterGroupLabel}>
                 <Field id="kitchen" name="kitchen" type="checkbox" />
-                <svg width="32" height="32">
-                  <use href="/sprite.svg#cup" />
-                </svg>
-                <span>Kitchen</span>
+                <span>
+                  <svg width="32" height="32">
+                    <use href="/sprite.svg#cup" />
+                  </svg>
+                  Kitchen
+                </span>
               </label>
-              <label>
+              <label className={css.filterGroupLabel}>
                 <Field id="tv" name="tv" type="checkbox" />
-                <svg width="32" height="32">
-                  <use href="/sprite.svg#tv" />
-                </svg>
-                <span>TV</span>
+                <span>
+                  <svg width="32" height="32">
+                    <use href="/sprite.svg#tv" />
+                  </svg>
+                  TV
+                </span>
               </label>
-              <label>
-                <Field id="bathroom" name="tv" type="bathroom" />
-                <svg width="32" height="32">
-                  <use href="/sprite.svg#shower" />
-                </svg>
-                <span>Bathroom</span>
+              <label className={css.filterGroupLabel}>
+                <Field id="bathroom" name="bathroom" type="checkbox" />
+                <span>
+                  <svg width="32" height="32">
+                    <use href="/sprite.svg#shower" />
+                  </svg>
+                  Bathroom
+                </span>
               </label>
             </div>
             {/* VEHICLE TYPE */}
-            <h3>Vehicle type</h3>
-            <div>
-              <label>
+            <h3 className={css.groupTitle}>Vehicle type</h3>
+            <div className={css.filterGroup}>
+              <label className={css.filterGroupLabel}>
                 <Field id="van" name="van" type="checkbox" />
-                <svg width="32" height="32">
-                  <use href="/sprite.svg#grid" />
-                </svg>
-                <span>Van</span>
+                <span>
+                  <svg width="32" height="32">
+                    <use href="/sprite.svg#grid" />
+                  </svg>
+                  Van
+                </span>
               </label>
-              <label>
+              <label className={css.filterGroupLabel}>
                 <Field id="integrated" name="integrated" type="checkbox" />
-                <svg width="32" height="32">
-                  <use href="/sprite.svg#grid-2" />
-                </svg>
-                <span>Fully Integrated</span>
+                <span>
+                  <svg width="32" height="32">
+                    <use href="/sprite.svg#grid-2" />
+                  </svg>
+                  Fully Integrated
+                </span>
               </label>
-              <label>
+              <label className={css.filterGroupLabel}>
                 <Field id="alcove" name="alcove" type="checkbox" />
-                <svg width="32" height="32">
-                  <use href="/sprite.svg#grid-3" />
-                </svg>
-                <span>Alcove</span>
+                <span>
+                  <svg width="32" height="32">
+                    <use href="/sprite.svg#grid-3" />
+                  </svg>
+                  Alcove
+                </span>
               </label>
             </div>
             {/* BUTTON SEARCH */}
-            <button type="submit">Search</button>
+            <button type="submit" className={css.filterButton}>
+              Search
+            </button>
           </Form>
         )}
       </Formik>
@@ -133,7 +161,7 @@ const Filter = () => {
         theme="light"
         transition={Bounce}
       />
-    </>
+    </div>
   );
 };
 

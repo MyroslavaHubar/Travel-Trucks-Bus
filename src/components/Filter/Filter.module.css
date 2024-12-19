@@ -1,0 +1,126 @@
+.filterForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+}
+
+.errorsMessage {
+  color: #be2b2b;
+  margin-top: 10px;
+}
+
+.filterLocation {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.locationTitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6c717b;
+  margin-bottom: 8px;
+}
+
+.locationInputWrapper {
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+
+.filterIcon {
+  margin-right: 4px;
+  stroke: #6c717b;
+}
+
+.locationInput {
+  background: transparent;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  outline: none;
+}
+
+.locationInput::placeholder {
+  color: #6c717b;
+}
+
+.locationInputWrapper:focus-within .filterIcon,
+.locationInputWrapper:focus-within .locationInput {
+  color: #101828;
+  stroke: #101828;
+}
+
+.filterTitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
+  margin-bottom: 32px;
+}
+
+.groupTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+  margin-bottom: 24px;
+}
+
+.filterGroup {
+  padding-top: 24px;
+  border-top: 1px solid #dadde1;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 12px;
+  row-gap: 8px;
+}
+
+.filterGroupEquipment {
+  margin-bottom: 32px;
+}
+
+.filterGroup input[type="checkbox"] {
+  display: none;
+}
+
+.filterGroupLabel span {
+  border: 1px solid #dadde1;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  width: 112px;
+  height: 96px;
+  text-align: center;
+}
+
+.filterGroup input[type="checkbox"]:checked + span {
+  border: 1px solid #e44848;
+}
+
+.filterButton {
+  border-radius: 200px;
+  border: none;
+  padding: 16px 60px;
+  width: 166px;
+  background-color: #e44848;
+  transition: background-color 150ms linear;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #fff;
+  margin-top: 56px;
+}
+
+.filterButton:hover {
+  background-color: #d84343;
+}
