@@ -4,19 +4,24 @@ import css from "./CatalogItem.module.css";
 
 const CatalogItem = ({ truck }) => {
   return (
-    <li className={css.catalogItems}>
-      {/* PHOTO AND PRICE */}
-      <div className={css.catalogPhotoBlock}>
+    <li className={css.catalogItem}>
+      {/* PHOTO */}
+      <div className={css.imageContainer}>
         <img
           src={truck.gallery[0].thumb}
           alt={truck.name}
-          width={292}
+          // width={292}
+          // height={320}
           className={css.catalogImage}
         />
-        <div>
+      </div>
+      {/* CONTENT */}
+      <div className={css.contentContainer}>
+        {/* TITLE AND PRICE */}
+        <div className={css.catalogTitlePrice}>
           <h3 className={css.catalogTitle}>{truck.name}</h3>
-          <div>
-            <p className={css.catalogPrice}>Price: &#x20AC;{truck.price}</p>
+          <div className={css.priceAndFavorite}>
+            <p className={css.catalogPrice}>&#x20AC;{truck.price.toFixed(2)}</p>
             <svg width="26" height="24">
               <use href="/sprite.svg#property" />
             </svg>
@@ -24,22 +29,26 @@ const CatalogItem = ({ truck }) => {
         </div>
         {/* RATING AND LOCATION */}
         <div className={css.catalogRatingBlock}>
-          <svg width="26" height="24" className={css.catalogIconRating}>
-            <use href="/sprite.svg#rating" />
-          </svg>
-
-          <p className={css.catalogReviews}>
-            {truck.rating} ({truck.countReviews} Reviews)
-          </p>
-          <svg width="26" height="24">
-            <use href="/sprite.svg#map" />
-          </svg>
-          <p className={css.catalogLocation}>{truck.location}</p>
+          <div className={css.catalogRating}>
+            <svg width="16" height="16" className={css.catalogIconRating}>
+              <use href="/sprite.svg#rating" />
+            </svg>
+            <p className={css.catalogReviews}>
+              {truck.rating} ({truck.countReviews} Reviews)
+            </p>
+          </div>
+          <div className={css.catalogRating}>
+            <svg width="16" height="16">
+              <use href="/sprite.svg#map" />
+            </svg>
+            <p className={css.catalogLocationTitle}>{truck.location}</p>
+          </div>
         </div>
         {/* DESCRIPTION */}
         <p className={css.catalogDescription}>{truck.description}</p>
         {/* CATEGORIES */}
         <Categories truck={truck} />
+        {/* ITEM BUTTON */}
         <NavLink to={`/catalog/${truck.id}`} className={css.catalogItemsButton}>
           Show more
         </NavLink>
