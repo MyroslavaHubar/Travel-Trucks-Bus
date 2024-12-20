@@ -5,18 +5,18 @@ import CatalogList from "../../components/CatalogList/CatalogList";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchAllTrucks } from "../../redux/allTrucks/operations";
+import css from "./Catalog.module.css";
 
 const Catalog = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log("Fetching all trucks...");
     dispatch(fetchAllTrucks());
   }, [dispatch]);
 
   return (
     <Section>
-      <Container>
+      <Container className={css.catalogContainer}>
         <Filter />
         <CatalogList />
       </Container>

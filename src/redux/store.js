@@ -20,6 +20,12 @@ export const store = configureStore({
     allTrucks: persistReducer(persistConfig, allTrucksReducer),
     filterTrucks: persistReducer(filtersPersistConfig, filterTruckReducer),
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: ["persist/PERSIST", "persist/REHYDRATE"],
+      },
+    }),
 });
 
 export const persistor = persistStore(store);

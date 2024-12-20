@@ -5,17 +5,17 @@ import {
 } from "../../redux/allTrucks/selectors";
 import Loader from "../Loader/Loader";
 import CatalogItem from "../CatalogItem/CatalogItem";
+import css from "./CatalogList.module.css";
 
 const CatalogList = () => {
   const trucks = useSelector(selectAllTrucks);
   const isLoading = useSelector(selectAllTrucksIsLoading);
-  console.log("Trucks:", trucks);
   if (isLoading) {
     return <Loader />;
   }
 
   return (
-    <div>
+    <div className={css.catalogListContainer}>
       <ul>
         {trucks.length > 0 ? (
           trucks.map((truck) => (

@@ -3,12 +3,12 @@ import * as Yup from "yup";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import css from "./Filter.module.css";
-import { useDispatch } from "react-redux";
-import {
-  setLocation,
-  setForm,
-  toggleFeature,
-} from "../../redux/filterTrucks/slice";
+// import { useDispatch } from "react-redux";
+// import {
+//   setLocation,
+//   setForm,
+//   toggleFeature,
+// } from "../../redux/filterTrucks/slice";
 
 const LocationSchema = Yup.object().shape({
   location: Yup.string().matches(

@@ -1,6 +1,8 @@
 import css from "./Container.module.css";
-const Container = ({ children }) => {
-  return <div className={css.container}>{children}</div>;
+const Container = ({ children, className }) => {
+  const containerClass = `${css.container} ${className || ""}`;
+
+  return <div className={containerClass}>{children}</div>;
 };
 
 export default Container;
