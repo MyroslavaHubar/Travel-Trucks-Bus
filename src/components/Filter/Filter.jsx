@@ -3,12 +3,8 @@ import * as Yup from "yup";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import css from "./Filter.module.css";
-// import { useDispatch } from "react-redux";
-// import {
-//   setLocation,
-//   setForm,
-//   toggleFeature,
-// } from "../../redux/filterTrucks/slice";
+import { useDispatch } from "react-redux";
+import { changeFilter } from "../../redux/filterTrucks/slice";
 
 const LocationSchema = Yup.object().shape({
   location: Yup.string().matches(
@@ -18,7 +14,7 @@ const LocationSchema = Yup.object().shape({
 });
 
 const Filter = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const initialValues = {
     location: "",
@@ -30,18 +26,8 @@ const Filter = () => {
     form: "",
   };
   const handleSubmit = (values) => {
-    console.log(values);
-
-    // dispatch(setLocation(values.location));
-    // dispatch(setForm(values.form));
-
-    // const features = [];
-    // if (values.AC) features.push("AC");
-    // if (values.kitchen) features.push("kitchen");
-    // if (values.TV) features.push("TV");
-    // if (values.bathroom) features.push("bathroom");
-
-    // dispatch(toggleFeature(features));
+    // console.log(values);
+    dispatch(changeFilter(values));
     toast.success("Very cool! Successful!");
   };
 

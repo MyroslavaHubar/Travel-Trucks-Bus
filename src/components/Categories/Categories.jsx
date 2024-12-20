@@ -1,3 +1,5 @@
+import css from "./Categories.module.css";
+
 const Categories = ({ truck }) => {
   const categories = [
     {
@@ -21,17 +23,17 @@ const Categories = ({ truck }) => {
   ];
 
   return (
-    <ul>
+    <ul className={css.categoryList}>
       {categories.map((category) => {
         const isFeatureAvailable =
           truck[category.key] === true ||
           truck[category.key] === category.value;
         return isFeatureAvailable ? (
-          <div key={category.key}>
-            <svg width="20" height="20">
+          <div key={category.key} className={css.categoryContent}>
+            <svg width="20" height="20" className={css.categoryIcon}>
               <use href={`/sprite.svg#${category.svg}`} />
             </svg>
-            <span>{category.label}</span>
+            <span className={css.categoryTitle}>{category.label}</span>
           </div>
         ) : null;
       })}

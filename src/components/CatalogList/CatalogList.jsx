@@ -1,14 +1,10 @@
 import { useSelector } from "react-redux";
-import {
-  selectAllTrucks,
-  selectAllTrucksIsLoading,
-} from "../../redux/allTrucks/selectors";
+import { selectAllTrucksIsLoading } from "../../redux/allTrucks/selectors";
 import Loader from "../Loader/Loader";
 import CatalogItem from "../CatalogItem/CatalogItem";
 import css from "./CatalogList.module.css";
 
-const CatalogList = () => {
-  const trucks = useSelector(selectAllTrucks);
+const CatalogList = ({ trucks }) => {
   const isLoading = useSelector(selectAllTrucksIsLoading);
   if (isLoading) {
     return <Loader />;
