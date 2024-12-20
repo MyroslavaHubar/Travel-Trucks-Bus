@@ -27,6 +27,7 @@ export const allTrucksSlice = createSlice({
         state.error = null;
       })
       .addCase(fetchAllTrucks.fulfilled, (state, action) => {
+        console.log("API Response:", action.payload.items);
         state.isLoading = false;
         state.items = action.payload.items;
       })

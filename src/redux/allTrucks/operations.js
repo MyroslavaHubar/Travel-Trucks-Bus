@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { instance } from "../API/server";
-import { selectFilters } from "../filterTrucks/selectors";
+// import { selectFilters } from "../filterTrucks/selectors";
 
 export const fetchAllTrucks = createAsyncThunk(
   "trucks/fetchAllTrucks",

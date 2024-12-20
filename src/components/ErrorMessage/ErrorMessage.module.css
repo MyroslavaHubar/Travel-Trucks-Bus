@@ -1,0 +1,9 @@
+.errorMessageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorMessage {
+  color: #ad1919;
+}

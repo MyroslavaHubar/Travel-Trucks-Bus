@@ -3,15 +3,23 @@ import * as Yup from "yup";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import css from "./Filter.module.css";
+import { useDispatch } from "react-redux";
+import {
+  setLocation,
+  setForm,
+  toggleFeature,
+} from "../../redux/filterTrucks/slice";
 
 const LocationSchema = Yup.object().shape({
   location: Yup.string().matches(
     /^[A-Za-z\s]+$/,
-    "Location can only contain Latin letters and spaces"
+    "Location can only contain latin letters and spaces"
   ),
 });
 
 const Filter = () => {
+  // const dispatch = useDispatch();
+
   const initialValues = {
     location: "",
     AC: false,
@@ -23,6 +31,17 @@ const Filter = () => {
   };
   const handleSubmit = (values) => {
     console.log(values);
+
+    // dispatch(setLocation(values.location));
+    // dispatch(setForm(values.form));
+
+    // const features = [];
+    // if (values.AC) features.push("AC");
+    // if (values.kitchen) features.push("kitchen");
+    // if (values.TV) features.push("TV");
+    // if (values.bathroom) features.push("bathroom");
+
+    // dispatch(toggleFeature(features));
     toast.success("Very cool! Successful!");
   };
 

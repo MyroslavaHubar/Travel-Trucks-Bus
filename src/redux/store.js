@@ -1,28 +1,25 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { persistReducer, persistStore } from "redux-persist";
+import { allTrucksReducer } from "./allTrucks/slice";
+import { filterTruckReducer } from "./filterTrucks/slice";
+import storage from "redux-persist/lib/storage";
 
-import {
-  persistStore,
-  FLUSH,
-  REHYDRATE,
-  PAUSE,
-  PERSIST,
-  PURGE,
-  REGISTER,
-} from "redux-persist";
+const filtersPersistConfig = {
+  key: "filterTrucks",
+  storage,
+};
 
-import { allTrucksReducer, filterTruckReducer } from "./filterTrucks/slice";
+const persistConfig = {
+  key: "allTrucks",
+  storage,
+  whitelist: ["allTransport"],
+};
 
 export const store = configureStore({
   reducer: {
-    allTrucks: allTrucksReducer,
-    filterTrucks: filterTruckReducer,
+    allTrucks: persistReducer(persistConfig, allTrucksReducer),
+    filterTrucks: persistReducer(filtersPersistConfig, filterTruckReducer),
   },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      serializableCheck: {
-        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-      },
-    }),
 });
 
 export const persistor = persistStore(store);
