@@ -34,7 +34,7 @@ export const fetchFilteredTrucks = createAsyncThunk(
     const filters = selectFilters(state);
 
     try {
-      const { data } = await instance.get("/trucks", {
+      const { data } = await instance.get("/campers", {
         params: {
           location: filters.location,
           form: filters.form,

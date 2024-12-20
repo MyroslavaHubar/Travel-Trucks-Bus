@@ -1,3 +1,18 @@
 .catalogListContainer {
   width: 888px;
 }
+
+.catalogList {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.catalogMessage {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 0.67;
+  color: #702b2b;
+  text-align: center;
+  margin-top: 20px;
+}

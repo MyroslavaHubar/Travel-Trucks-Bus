@@ -16,22 +16,11 @@ const CatalogList = () => {
 
   return (
     <div className={css.catalogListContainer}>
-      <ul>
+      <ul className={css.catalogList}>
         {trucks.length > 0 ? (
-          trucks.map((truck) => (
-            <CatalogItem
-              key={truck.id}
-              countReviews={truck.reviews?.length || 0}
-              description={truck.description}
-              gallery={truck.gallery}
-              location={truck.location}
-              name={truck.name}
-              price={truck.price.toFixed(2)}
-              rating={truck.rating}
-            />
-          ))
+          trucks.map((truck) => <CatalogItem key={truck.id} truck={truck} />)
         ) : (
-          <p>No trucks. Sorry!</p>
+          <p className={css.catalogMessage}>No trucks. Sorry!</p>
         )}
       </ul>
     </div>
