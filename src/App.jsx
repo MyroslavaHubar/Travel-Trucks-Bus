@@ -11,6 +11,7 @@ import { Bounce, ToastContainer } from "react-toastify";
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const Catalog = lazy(() => import("./pages/Catalog/Catalog"));
 const DetailsPage = lazy(() => import("./pages/DetailsPage/DetailsPage"));
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"));
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
               <Route path="features" element={<Features />} />
               <Route path="reviews" element={<Reviews />} />
             </Route>
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Suspense>
       </main>
