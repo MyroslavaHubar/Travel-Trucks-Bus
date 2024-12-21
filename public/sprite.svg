@@ -45,9 +45,9 @@
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.01" d="M20.667 13.333h2M16 18v2M11.333 13.333h-2M16 8.667v-2"></path>
 </symbol>
 <symbol id="microwave" viewBox="0 0 32 32">
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.01" d="M26.667 5.333h-21.333c-1.473 0-2.667 1.194-2.667 2.667v14.667c0 1.473 1.194 2.667 2.667 2.667h21.333c1.473 0 2.667-1.194 2.667-2.667v-14.667c0-1.473-1.194-2.667-2.667-2.667z"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.01" d="M17.333 10.667h-8c-0.736 0-1.333 0.597-1.333 1.333v6.667c0 0.736 0.597 1.333 1.333 1.333h8c0.736 0 1.333-0.597 1.333-1.333v-6.667c0-0.736-0.597-1.333-1.333-1.333z"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.01" d="M24 10.667v9.333M8 25.333v2.667M24 25.333v2.667"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M26.667 5.333h-21.333c-1.473 0-2.667 1.194-2.667 2.667v14.667c0 1.473 1.194 2.667 2.667 2.667h21.333c1.473 0 2.667-1.194 2.667-2.667v-14.667c0-1.473-1.194-2.667-2.667-2.667z"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M17.333 10.667h-8c-0.736 0-1.333 0.597-1.333 1.333v6.667c0 0.736 0.597 1.333 1.333 1.333h8c0.736 0 1.333-0.597 1.333-1.333v-6.667c0-0.736-0.597-1.333-1.333-1.333z"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M24 10.667v9.333M8 25.333v2.667M24 25.333v2.667"></path>
 </symbol>
 <symbol id="fridge" viewBox="0 0 32 32">
 <path d="M23.667 9.333c0-0.265-0.105-0.52-0.293-0.707s-0.442-0.293-0.707-0.293c-0.265 0-0.52 0.105-0.707 0.293s-0.293 0.442-0.293 0.707v2.667c0 0.265 0.105 0.52 0.293 0.707s0.442 0.293 0.707 0.293c0.265 0 0.52-0.105 0.707-0.293s0.293-0.442 0.293-0.707v-2.667zM23.667 18.667c0-0.265-0.105-0.52-0.293-0.707s-0.442-0.293-0.707-0.293c-0.265 0-0.52 0.105-0.707 0.293s-0.293 0.442-0.293 0.707v2.667c0 0.265 0.105 0.52 0.293 0.707s0.442 0.293 0.707 0.293c0.265 0 0.52-0.105 0.707-0.293s0.293-0.442 0.293-0.707v-2.667z"></path>

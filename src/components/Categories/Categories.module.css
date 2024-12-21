@@ -21,6 +21,6 @@
 
 .categoryIcon {
   fill: #101828;
-  /* fill: none; */
-  stroke: #101828;
+  width: 20px;
+  height: 20px;
 }
