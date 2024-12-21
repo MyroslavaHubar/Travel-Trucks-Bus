@@ -80,3 +80,25 @@
   color: #475467;
   margin-bottom: 60px;
 }
+
+.detailsNavigations {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 44px;
+  border-bottom: 1px solid #dadde1;
+}
+
+.detailsNavigations .link {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+  margin-bottom: 24px;
+}
+
+.detailsNavigations .active {
+  text-decoration: underline;
+  text-decoration-color: #e44848;
+  text-decoration-thickness: 5px;
+  text-underline-offset: 25px;
+}

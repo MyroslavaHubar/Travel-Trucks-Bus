@@ -55,7 +55,7 @@ const TruckDetails = () => {
         <p className={css.detailsDescription}> {truckById.description}</p>
       </Container>
       <Container>
-        <div>
+        <div className={css.detailsNavigations}>
           <NavLink to="features" className={buildLinkClass}>
             Features
           </NavLink>
