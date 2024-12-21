@@ -1,10 +1,12 @@
-import { Suspense } from "react";
+import { lazy, Suspense } from "react";
 import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
 import Loader from "./components/Loader/Loader";
 import { Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage/HomePage";
-import Catalog from "./pages/Catalog/Catalog";
+
+const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
+const Catalog = lazy(() => import("./pages/Catalog/Catalog"));
+const DetailsPage = lazy(() => import("./pages/DetailsPage/DetailsPage"));
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/catalog" element={<Catalog />} />
+            <Route path="/catalog/:id" element={<DetailsPage />}></Route>
           </Routes>
         </Suspense>
       </main>

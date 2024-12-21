@@ -34,7 +34,8 @@ const CatalogItem = ({ truck }) => {
               <use href="/sprite.svg#rating" />
             </svg>
             <p className={css.catalogReviews}>
-              {truck.rating} ({truck.countReviews} Reviews)
+              {truck.rating} ({truck.reviews ? truck.reviews.length : 0}{" "}
+              Reviews)
             </p>
           </div>
           <div className={css.catalogRating}>
