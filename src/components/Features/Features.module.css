@@ -1,3 +1,40 @@
 .featuresContainer {
-  width: 631px;
+  min-width: 631px;
+  min-height: 588px;
+  padding: 44px 52px;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+}
+
+.featuresBox {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  /* justify-content: space-between; */
+}
+
+.featuresTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+  margin-bottom: 24px;
+}
+
+.featuresDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid #dadde1;
+}
+
+.featuresDetailsContext {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #101828;
 }
