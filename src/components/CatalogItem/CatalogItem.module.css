@@ -64,6 +64,12 @@
   justify-content: center;
 }
 
+.catalogStarIcon {
+  width: 16px;
+  height: 16px;
+  fill: #ffc531;
+}
+
 .catalogReviews {
   text-decoration: underline;
   text-decoration-skip-ink: none;

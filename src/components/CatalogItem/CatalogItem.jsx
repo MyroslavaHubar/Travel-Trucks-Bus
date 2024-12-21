@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import Categories from "../Categories/Categories";
 import css from "./CatalogItem.module.css";
+import { FaStar } from "react-icons/fa";
 
 const CatalogItem = ({ truck }) => {
   return (
@@ -30,9 +31,7 @@ const CatalogItem = ({ truck }) => {
         {/* RATING AND LOCATION */}
         <div className={css.catalogRatingBlock}>
           <div className={css.catalogRating}>
-            <svg width="16" height="16" className={css.catalogIconRating}>
-              <use href="/sprite.svg#rating" />
-            </svg>
+            <FaStar className={css.catalogStarIcon} />
             <p className={css.catalogReviews}>
               {truck.rating} ({truck.reviews ? truck.reviews.length : 0}{" "}
               Reviews)
