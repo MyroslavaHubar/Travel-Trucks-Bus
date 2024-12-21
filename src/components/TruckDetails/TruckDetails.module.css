@@ -64,13 +64,12 @@
   object-fit: cover;
 }
 
-.detailsMessage {
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 0.67;
-  color: #702b2b;
-  text-align: center;
+.detailsIconImage {
+  width: 50px;
+  height: 50px;
   margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .detailsDescription {

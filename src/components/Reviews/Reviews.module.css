@@ -1,5 +1,6 @@
 .reviewsContainer {
-  width: 631px;
+  min-width: 631px;
+  min-height: 588px;
 }
 
 .reviewsContent {

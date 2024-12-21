@@ -1,3 +1,39 @@
+.errorMessage {
+  color: #e44848;
+  margin-top: 3px;
+}
+
 .formContainer {
-  width: 641px;
+  min-width: 641px;
+  min-height: 588px;
+  border-radius: 10px;
+  padding: 44px;
+  border: 1px solid #dadde1;
+}
+
+.formBox {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+  margin-bottom: 8px;
+}
+
+.formContext {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6c717b;
+}
+
+.truckForma {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }

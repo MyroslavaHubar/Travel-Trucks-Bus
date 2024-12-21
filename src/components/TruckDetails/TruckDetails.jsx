@@ -7,6 +7,7 @@ import css from "./TruckDetails.module.css";
 import { NavLink, Outlet } from "react-router-dom";
 import { Suspense } from "react";
 import TruckForm from "../TruckForm/TruckForm";
+import { TbPhotoCancel } from "react-icons/tb";
 
 const TruckDetails = () => {
   const truckById = useSelector(selectTruckById);
@@ -50,7 +51,7 @@ const TruckDetails = () => {
             ))}
           </ul>
         ) : (
-          <p className={css.detailsMessage}>No images. Sorry!</p>
+          <TbPhotoCancel className={css.detailsIconImage} />
         )}
         {/* DESCRIPTION */}
         <p className={css.detailsDescription}> {truckById.description}</p>
