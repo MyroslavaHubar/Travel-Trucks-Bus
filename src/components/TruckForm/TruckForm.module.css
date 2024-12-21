@@ -36,4 +36,57 @@
   display: flex;
   flex-direction: column;
   gap: 7px;
+  margin-bottom: 24px;
+}
+
+.truckFormInput {
+  border: none;
+  border-radius: 12px;
+  padding: 18px 18px;
+  width: 527px;
+  background-color: #f7f7f7;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.truckFormComment {
+  border: none;
+  border-radius: 12px;
+  padding: 18px 18px;
+  width: 527px;
+  background-color: #f7f7f7;
+  height: 118px;
+  resize: none;
+}
+
+.truckFormInput::placeholder,
+.truckFormComment::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6c717b;
+}
+
+.formButton {
+  border-radius: 200px;
+  border: none;
+  padding: 16px 60px;
+  width: 166px;
+  background-color: #e44848;
+  transition: background-color 150ms linear;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+.formButton:hover {
+  background-color: #d84343;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
 }

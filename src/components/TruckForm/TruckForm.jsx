@@ -2,8 +2,9 @@ import { Container } from "@mui/material";
 import css from "./TruckForm.module.css";
 import * as Yup from "yup";
 import { Field, Form, Formik } from "formik";
-import { toast } from "react-toastify";
 import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { toast } from "react-toastify";
 
 const TruckFormSchema = Yup.object().shape({
   name: Yup.string().required("Name is required"),
@@ -32,7 +33,7 @@ const TruckForm = () => {
             }}
             validationSchema={TruckFormSchema}
             onSubmit={(values, { resetForm }) => {
-              toast.success("Successfully! Cool!");
+              toast.success("Very cool! Successful!");
               resetForm();
             }}
           >
@@ -41,7 +42,7 @@ const TruckForm = () => {
                 <div className={css.truckForma}>
                   <label htmlFor="name"></label>
                   <Field
-                    className={css.truckFormaTitle}
+                    className={css.truckFormInput}
                     name="name"
                     type="text"
                     placeholder="Name*"
@@ -51,7 +52,7 @@ const TruckForm = () => {
                   ) : null}
                   <label htmlFor="email"></label>
                   <Field
-                    className={css.input_text}
+                    className={css.truckFormInput}
                     name="email"
                     type="email"
                     placeholder="Email*"
@@ -63,24 +64,25 @@ const TruckForm = () => {
                   <DatePicker
                     selected={values.date}
                     onChange={(date) => setFieldValue("date", date)}
-                    className={css.input_text}
+                    className={css.truckFormInput}
                     placeholderText="Booking date*"
-                    locale="en-GB"
                   />
                   {touched.date && errors.date ? (
                     <div className={css.errorMessage}>{errors.date}</div>
                   ) : null}
                   <label htmlFor="comment"></label>
                   <Field
-                    className={css.input_comment}
+                    className={css.truckFormComment}
                     name="comment"
                     as="textarea"
                     placeholder="Comment"
                   />
                 </div>
-                <button className={css.send_button} type="submit">
-                  Send
-                </button>
+                <div className={css.buttonContainer}>
+                  <button className={css.formButton} type="submit">
+                    Send
+                  </button>
+                </div>
               </Form>
             )}
           </Formik>

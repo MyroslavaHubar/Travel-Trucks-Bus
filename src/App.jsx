@@ -5,6 +5,8 @@ import Loader from "./components/Loader/Loader";
 import { Route, Routes } from "react-router-dom";
 import Features from "./components/Features/Features";
 import Reviews from "./components/Reviews/Reviews";
+import "react-toastify/dist/ReactToastify.css";
+import { Bounce, ToastContainer } from "react-toastify";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const Catalog = lazy(() => import("./pages/Catalog/Catalog"));
@@ -26,6 +28,20 @@ function App() {
           </Routes>
         </Suspense>
       </main>
+      {/* TOAST CONTAINER */}
+      <ToastContainer
+        position="top-left"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
     </>
   );
 }

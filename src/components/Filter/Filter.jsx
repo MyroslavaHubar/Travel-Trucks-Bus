@@ -1,7 +1,7 @@
 import { Field, Form, Formik } from "formik";
 import * as Yup from "yup";
-import { Bounce, ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
+
 import css from "./Filter.module.css";
 import { useDispatch } from "react-redux";
 import { changeFilter } from "../../redux/filterTrucks/slice";
@@ -151,21 +151,6 @@ const Filter = () => {
           </Form>
         )}
       </Formik>
-
-      {/* TOAST CONTAINER */}
-      <ToastContainer
-        position="top-left"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={false}
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-        transition={Bounce}
-      />
     </div>
   );
 };
