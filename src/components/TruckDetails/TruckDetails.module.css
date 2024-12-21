@@ -102,3 +102,12 @@
   text-decoration-thickness: 5px;
   text-underline-offset: 25px;
 }
+
+.detailsContainerNavigationd {
+  max-width: 631px;
+}
+
+.detailsNavigationsContent {
+  display: flex;
+  gap: 40px;
+}

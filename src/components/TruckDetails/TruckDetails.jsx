@@ -6,6 +6,7 @@ import clsx from "clsx";
 import css from "./TruckDetails.module.css";
 import { NavLink, Outlet } from "react-router-dom";
 import { Suspense } from "react";
+import TruckForm from "../TruckForm/TruckForm";
 
 const TruckDetails = () => {
   const truckById = useSelector(selectTruckById);
@@ -63,9 +64,12 @@ const TruckDetails = () => {
             Reviews
           </NavLink>
         </div>
-        <Suspense fallback={<div>Loading subpage...</div>}>
-          <Outlet />
-        </Suspense>
+        <div className={css.detailsNavigationsContent}>
+          <Suspense fallback={<div>Loading subpage...</div>}>
+            <Outlet />
+          </Suspense>
+          <TruckForm />
+        </div>
       </Container>
     </>
   );

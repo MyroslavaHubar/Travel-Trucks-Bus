@@ -1,0 +1,37 @@
+.reviewsContainer {
+  width: 631px;
+}
+
+.reviewsContent {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.reviewsAvatar {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.reviewsDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: start;
+}
+
+.reviewerName {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #101828;
+}
+
+.reviewsComment {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
+}
