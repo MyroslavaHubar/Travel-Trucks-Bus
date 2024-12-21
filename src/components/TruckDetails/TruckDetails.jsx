@@ -11,8 +11,10 @@ import { TbPhotoCancel } from "react-icons/tb";
 
 const TruckDetails = () => {
   const truckById = useSelector(selectTruckById);
-  const buildLinkClass = ({ isActive }) => {
-    return clsx(css.link, isActive && css.active);
+  const buildLinkClass = ({ isActive }, path) => {
+    const isDefaultActive =
+      path === "features" && location.pathname.endsWith(truckById.id);
+    return clsx(css.link, (isActive || isDefaultActive) && css.active);
   };
   return (
     <>
@@ -58,10 +60,16 @@ const TruckDetails = () => {
       </Container>
       <Container>
         <div className={css.detailsNavigations}>
-          <NavLink to="features" className={buildLinkClass}>
+          <NavLink
+            to="features"
+            className={(props) => buildLinkClass(props, "features")}
+          >
             Features
           </NavLink>
-          <NavLink to="reviews" className={buildLinkClass}>
+          <NavLink
+            to="reviews"
+            className={(props) => buildLinkClass(props, "reviews")}
+          >
             Reviews
           </NavLink>
         </div>
